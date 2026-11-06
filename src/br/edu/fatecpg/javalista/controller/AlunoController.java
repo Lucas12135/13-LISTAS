@@ -23,4 +23,17 @@ public class AlunoController {
 		}
 		return sb.toString();
 	}
+	
+	public Aluno removerAluno(int matricula) {
+		for(Aluno a:listaAlunos) {
+			if(a.getMatricula() == matricula) {
+				listaAlunos.remove(a);
+				return a;
+			}
+		}
+		System.out.println("O aluno não exite");
+		return null;
+	}
+	
+	
 }

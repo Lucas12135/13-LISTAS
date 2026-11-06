@@ -14,6 +14,8 @@ public class Main {
 		
 		System.out.println(ac.getAluno(2));
 		
+		System.out.println("Aluno removido: " + ac.removerAluno(12));
+		
 		System.out.println(ac.mostrarAlunos());
 	}
 
