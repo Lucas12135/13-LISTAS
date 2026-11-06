@@ -23,7 +23,6 @@ public class AlunoController {
 		}
 		return sb.toString();
 	}
-	
 	public Aluno removerAluno(int matricula) {
 		for(Aluno a:listaAlunos) {
 			if(a.getMatricula() == matricula) {
@@ -31,9 +30,25 @@ public class AlunoController {
 				return a;
 			}
 		}
-		System.out.println("O aluno não exite");
+		System.out.println("Aluno não encontrado");
 		return null;
 	}
-	
-	
+	public int buscarIndice(int matricula) {
+		for(Aluno a:listaAlunos) {
+			if(a.getMatricula() == matricula) {
+				return listaAlunos.indexOf(a);
+			}
+		}
+		System.out.println("Aluno não encontrado");
+		return -1;
+	}
+	public int buscarIndice(String nome) {
+		for(Aluno a:listaAlunos) {
+			if(a.getNome() == nome) {
+				return listaAlunos.indexOf(a);
+			}
+		}
+		System.out.println("Aluno não encontrado");
+		return -1;
+	}
 }

@@ -14,7 +14,10 @@ public class Main {
 		
 		System.out.println(ac.getAluno(2));
 		
-		System.out.println("Aluno removido: " + ac.removerAluno(12));
+		System.out.println("Aluno removido: " + ac.removerAluno(40));
+		
+		System.out.println("índice usando matícula: " + ac.buscarIndice(80));
+		System.out.println("Índice usando nome: " + ac.buscarIndice("Ale"));
 		
 		System.out.println(ac.mostrarAlunos());
 	}
