@@ -14,10 +14,14 @@ public class Main {
 		
 		System.out.println(ac.getAluno(2));
 		
-		System.out.println("Aluno removido: " + ac.removerAluno(40));
+		System.out.println("Aluno removido: " + ac.removerAluno(80));
 		
-		System.out.println("índice usando matícula: " + ac.buscarIndice(80));
+		System.out.println("índice usando matrícula: " + ac.buscarIndice(40));
 		System.out.println("Índice usando nome: " + ac.buscarIndice("Ale"));
+		
+		ac.virarSemestre();
+		
+		System.out.println(ac.mostrarAlunos());
 		
 		System.out.println(ac.mostrarAlunos());
 	}

@@ -14,14 +14,24 @@ public class AlunoController {
 		listaAlunos.add(a);
 	}
 	public Aluno getAluno(int index) {
-		return listaAlunos.get(index);
+		if(!listaAlunos.isEmpty())
+			return listaAlunos.get(index);
+		else {
+			System.out.println("A lista está vazia");
+			return null;
+		}
 	}
 	public String mostrarAlunos() {
-		StringBuilder sb = new StringBuilder();
-		for(Aluno a:listaAlunos) {
-			sb.append(a.toString()+"\n");
+		if(!listaAlunos.isEmpty()) {
+			StringBuilder sb = new StringBuilder();
+			for(Aluno a:listaAlunos) {
+				sb.append(a.toString()+"\n");
+			}
+			return sb.toString();
+		} else {
+			System.out.println("A lista está vazia");
+			return "";
 		}
-		return sb.toString();
 	}
 	public Aluno removerAluno(int matricula) {
 		for(Aluno a:listaAlunos) {
@@ -51,4 +61,22 @@ public class AlunoController {
 		System.out.println("Aluno não encontrado");
 		return -1;
 	}
+	public void limparLista() {
+		listaAlunos.clear();
+	}
+	public void virarSemestre() {
+		if(!listaAlunos.isEmpty()) {
+	        for (int i = listaAlunos.size() - 1; i >= 0; i--) {
+	            Aluno a = listaAlunos.get(i);
+	            if (a.getCiclo() >= 6) {
+	                listaAlunos.remove(i);
+	            } else {
+	                a.setCiclo(a.getCiclo() + 1);
+	            }
+	        }
+		} else {
+			System.out.println("A lista está vazia");
+		}
+	}
+	
 }
